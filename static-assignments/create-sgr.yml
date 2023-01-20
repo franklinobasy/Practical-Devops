@@ -7,7 +7,7 @@
   tasks:
     - include_vars: ../vars/ec2-vars.yml
 
-    - name: "Creating {{ security_group }}"
+    - name: Creating security group
       local_action:
         module: ec2_group
         name: "{{ security_group }}"

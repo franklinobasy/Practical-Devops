@@ -8,23 +8,13 @@
   - include_vars: ../vars/ec2-vars.yml
   - name: Launch task
     local_action:
-      module: ec2
-      group: "{{ security-group }}"
+      module: amazon.aws.ec2_instance
       instance_type: "{{ instance_type }}"
-      image: "{{ image }}"
+      image_id: "{{ image }}"
       wait: yes
-      keypair: "{{ keypair }}"
+      key_name: "{{ keypair }}"
       region: "{{ region }}"
       count: "{{ count }}"
-    register: ec2
-
-  - name: Tag Instance
-    local_action:
-      module: ec2_tag
-      resource: "{{ item.id }}"
-      region: "{{ region }}"
-      state: "{{ present }}"
-    with_items: "{{ ec2.instances }}"
-    args:
+      security_group: "{{ security_group }}"
       tags:
-        Name: MyEc2Instance
+       Name: "Myec2instance"

@@ -3,7 +3,7 @@
 
 keypair: devops
 instance_type: t2.micro
-image:  ami-01625be155ee390e9
+image:  ami-00874d747dde814fa
 count: 1
 region: us-east-1
-security_group: sg-common
+security_group: sg_common
