@@ -1,0 +1,10 @@
+---
+# ./playbooks/main.yml
+
+- hosts: localhost
+  connection: local
+- import_playbook: ../static-assignments/create-sgr.yml
+
+- hosts: localhost
+  connection: local
+- import_playbook: ../static-assignments/create-ec2.yml

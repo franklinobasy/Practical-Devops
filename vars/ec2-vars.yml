@@ -1,0 +1,9 @@
+---
+# ./vars/ec2-vars.yml
+
+keypair: devops
+instance_type: t2.micro
+image:  ami-01625be155ee390e9
+count: 1
+region: us-east-1
+security_group: sg-common
