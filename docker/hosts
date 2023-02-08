@@ -1,0 +1,5 @@
+[webservers]
+18.207.236.65
+
+[webservers:vars]
+ansible_ssh_private_key_file=/home/ubuntu/docker/key.pem
