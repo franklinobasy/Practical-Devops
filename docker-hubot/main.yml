@@ -27,9 +27,9 @@
         hostname: '{{ container_name }}'
         ansible_connection: docker
 
-    roles:
-      - name: hubot-slack
-        delegate_to: '{{ container_name }}'
+  roles:
+    - name: hubot-slack
+      delegate_to: '{{ container_name }}'
 
   post-tasks:
     - name: Clean up the container
