@@ -4,7 +4,7 @@
   package:
    name: sudo
    state: present
-
+  
 - name: Install required Node.js packages
   npm:
    name: "{{ item }}"
